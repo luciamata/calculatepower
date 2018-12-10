@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Times Table </title>
+    <script>
+    /* Input:
+     * Processing: Calculate the powers of 2, from 2^0 to 2^31.
+     * Output: Print out the results of each power.
+     */
+
+     function powers() {
+       var base = 2
+       var exponent = 0
+       var output = ""
+
+       while (exponent <=31) {
+         output += Math.pow(base, exponent) + ", "
+         exponent++;
+       }
+
+       document.getElementById('outputDiv').innerHTML = output;
+     }
+    </script>
+  </head>
+
+  <body>
+    See all the powers of 2 (from 2^0 to 2^31)!
+    <button type="button" onclick="powers()">Click</button> <br>
+    <div id="outputDiv"></div>
+  </body>
+</html>
